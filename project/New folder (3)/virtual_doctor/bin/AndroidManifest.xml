@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.virtual_doctor"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/lf"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" android:logo="@drawable/lf">
+        <activity
+            android:name="com.example.virtual_doctor.Login"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.virtual_doctor.Home"
+            android:label="@string/title_activity_home" >
+        </activity>
+        <activity
+            android:name="com.example.virtual_doctor.MainActivity"
+            android:label="@string/title_activity_main" >
+        </activity>
+        <activity
+            android:name="com.example.virtual_doctor.ViewSpecificationdepartmentActivity"
+            android:label="@string/title_activity_view_specificationdepartment" >
+        </activity>
+        <activity
+            android:name="com.example.virtual_doctor.DoctorViewActivity"
+            android:label="@string/title_activity_doctor_view" >
+        </activity>
+        <activity
+            android:name="com.example.virtual_doctor.BookingActivity"
+            android:label="@string/title_activity_booking" >
+        </activity>
+        <activity
+            android:name="com.example.virtual_doctor.ViewPrescriptionActivity"
+            android:label="@string/title_activity_view_prescription" >
+        </activity>
+        <activity
+            android:name="com.example.virtual_doctor.ViewDeseaseActivity"
+            android:label="@string/title_activity_view_desease" >
+        </activity>
+        <activity
+            android:name="com.example.virtual_doctor.FeedbackActivity"
+            android:label="@string/title_activity_feedback" >
+        </activity>
+        <activity
+            android:name="com.example.virtual_doctor.Booking"
+            android:label="@string/title_activity_booking" >
+        </activity>
+        <activity
+            android:name="com.example.virtual_doctor.Reg"
+            android:label="@string/title_activity_reg" >
+        </activity>
+        <activity
+            android:name="com.example.virtual_doctor.Custom2"
+            android:label="@string/title_activity_custom2" >
+        </activity>
+        <activity
+            android:name="com.example.virtual_doctor.Custom"
+            android:label="@string/title_activity_custom" >
+        </activity>
+        <activity
+            android:name="com.example.virtual_doctor.Custom3"
+            android:label="@string/title_activity_custom3" >
+        </activity>
+    </application>
+
+</manifest>

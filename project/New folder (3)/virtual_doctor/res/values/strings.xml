@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">virtual_doctor</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_home">Home</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_view_specificationdepartment">MainActivity</string>
+    <string name="title_activity_doctor_view">MainActivity</string>
+    <string name="title_activity_booking">MainActivity</string>
+    <string name="title_activity_view_prescription">MainActivity</string>
+    <string name="title_activity_view_desease">MainActivity</string>
+    <string name="title_activity_feedback">MainActivity</string>
+    <string name="title_activity_reg">Reg</string>
+    <string name="title_activity_custom2">Custom2</string>
+    <string name="title_activity_custom">Custom</string>
+    <string name="title_activity_custom3">Custom3</string>
+
+</resources>

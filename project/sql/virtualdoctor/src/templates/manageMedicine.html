@@ -1,0 +1,30 @@
+{% extends 'indpharmhome.html'%}
+{%block body%}
+
+<body>
+<form id="form1" name="form1" method="post" action="/add_medi">
+  <table width="200" border="1"align="center" class="table table-striped">
+    <tr>
+      <th scope="row">Medicine Name </th>
+      <td>Description</td>
+      <td>&nbsp;</td>
+    </tr>
+    {% for i in val %}
+    <tr>
+      <th scope="row">{{i[2]}}</th>
+      <td>{{i[3]}}</td>
+      <td><p><a href="{{url_for('editmedicine',id=i[0])}}">EDIT</a></p>
+      <p><a href="{{url_for('deletemedicine',id=i[0])}}">DELETE</a></p></td>
+    </tr>
+    {% endfor %}
+
+  <tr>
+  <th>  <label>
+    <input type="submit" name="Submit" value="ADD" class="btn btn-primary"/>
+    </label>
+  </th>
+  </tr>
+  </table>
+</form>
+</body>
+{%endblock%}

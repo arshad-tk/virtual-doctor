@@ -1,0 +1,29 @@
+{% extends 'indhospitalhome.html'%}
+{%block body%}
+<body>
+<form id="form1" name="form1" method="post" action="">
+  <table width="200" border="1"align="center" class="table table-striped">
+    <tr>
+      <th scope="row">Doctor Name </th>
+      <td>Department</td>
+      <td>Email</td>
+      <td>Contact</td>
+      <td>place</td>
+      <td>post</td>
+    </tr>
+
+     {% for i in val %}
+    <tr>
+      <th scope="row">{{i[2]}}</th>
+      <td>{{i[3]}}</td>
+      <td>{{i[4]}}</td>
+      <td>{{i[5]}}</td>
+      <td>{{i[6]}}</td>
+      <td><p><a href="{{url_for('editdoctor',id=i[0])}}">edit</a></p>
+      <p><a href="{{url_for('delete_doctor',id=i[0])}}">delete</a></p></td>
+    </tr>
+     {% endfor %}
+  </table>
+</form>
+</body>
+{%endblock%}

@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<form id="form1" name="form1" method="post" action="ADDdisese">
+  <table width="200" border="1" class="table table-striped">
+    <tr>
+      <th scope="row">Type</th>
+      <td><label>
+        <select name="select">
+
+          <option>viral</option>
+          <option>high</option>
+          <option>painfull</option>
+          <option selected="selected">normal</option>
+
+        </select>
+      </label></td>
+    </tr>
+    <tr>
+      <th scope="row">Disease Name </th>
+      <td><input type="textfield"name="name"required pattern="[A-Z a-z]{3,25}" /></td>
+    </tr>
+    <tr>
+      <th scope="row">Symptoms</th>
+      <td><label>
+        <textarea name="textarea" required pattern="[A-Z a-z]{3,25}"/></textarea>
+      </label></td>
+    </tr>
+    <tr>
+      <th colspan="2" scope="row"><label>
+        <input type="submit" name="Submit" value="ADD" class="btn btn-primary"/>
+      </label></th>
+    </tr>
+  </table>
+</form>
+</body>
+</html>

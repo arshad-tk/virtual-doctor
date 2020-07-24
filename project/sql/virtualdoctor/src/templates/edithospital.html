@@ -1,0 +1,70 @@
+{% extends 'indexhome.html'%}
+{%block body%}
+
+<body>
+<form id="form1" name="form1" method="post" action="/updatehospital">
+  <table width="200" border="1">
+    <tr>
+      <th scope="row">Hospital Name </th>
+      <td><label>
+        <input type="text" name="textfield" value="{{val[2]}}"  required pattern="[A-Z a-z]{3,25}"/>
+      </label></td>
+    </tr>
+    <tr>
+      <th scope="row">Place</th>
+      <td><label>
+        <input type="text" name="textfield6" value="{{val[3]}}"  required pattern="[A-Z a-z]{3,25}"/>
+      </label></td>
+    </tr>
+    <tr>
+      <th scope="row">District</th>
+      <td><label>
+        <select name="select">
+          <option value="kozhikkode" {% if val[6]=='kozhikkode' %}selected {% endif %}>kozhikkode</option>
+          <option value="malappuram" {% if val[6]=='malappuram' %}selected {% endif %}>malappuram</option>
+          <option value="palakkad" {% if val[6]=='palakkad' %}selected {% endif %}>palakkad</option>
+          <option value="thrissur" {% if val[6]=='thrissur' %}selected {% endif %}>thrissur</option>
+          <option value="pathanamthitta" {% if val[6]=='pathanamthitta' %}selected {% endif %}>pathanamthitta</option>
+          <option value="eranakulam" {% if val[6]=='eranakulam' %}selected {% endif %}>eranakulam</option>
+          <option value="vayanad" {% if val[6]=='vayanad' %}selected {% endif %}>vayanad</option>
+          <option value="kasarkod" {% if val[6]=='kasarkod' %}selected {% endif %}>kasarkod</option>
+          <option value="idukki" {% if val[6]=='idukki' %}selected {% endif %}>idukki</option>
+          <option value="yhiruvananthapuram" {% if val[6]=='thiruvananthapuram' %}selected {% endif %}>thiruvananthapuram</option>
+          <option selected="selected">kollam</option>
+                </select>
+      </label></td>
+    </tr>
+    <tr>
+      <th scope="row">Pincode</th>
+      <td><label>
+        <input type="text" name="textfield2" value="{{val[5]}}" />
+      </label></td>
+    </tr>
+    <tr>
+      <th scope="row">Post</th>
+      <td><label>
+        <input type="text" name="textfield3" value="{{val[4]}}"  required pattern="[A-Z a-z]{3,25}"/>
+      </label></td>
+    </tr>
+    <tr>
+      <th scope="row">Phone number </th>
+      <td><label>
+        <input type="text" name="textfield4" value="{{val[7]}}" required pattern="[6789][0-9]{9}"/>
+      </label></td>
+    </tr>
+    <tr>
+      <th scope="row">Email</th>
+      <td><label>
+        <input type="text" name="textfield5" value="{{val[8]}}" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"/>
+      </label></td>
+    </tr>
+
+  </table>
+    <p>
+    <label>
+    <input type="submit" name="Submit2" value="update" class="btn btn-primary"/>
+    </label>
+  </p>
+</form>
+</body>
+{%endblock%}

@@ -1,0 +1,31 @@
+{% extends 'indpharmhome.html'%}
+{%block body%}
+
+<body>
+<form id="form1" name="form1" method="post" action="/stockupdate">
+  <table width="200" border="1"align="center" class="table table-striped">
+    <tr>
+      <th scope="row">Medicine Name </th>
+      <td><label>
+        <select name="select">
+    {% for i in val %}
+          <option value="{{i[0]}}">{{i[2]}}</option>
+    {% endfor %}
+        </select>
+      </label></td>
+    </tr>
+    <tr>
+      <th scope="row">Stock</th>
+      <td><label>
+        <input type="text" name="textfield" />
+      </label></td>
+    </tr>
+    <tr>
+      <th colspan="2" scope="row"><label>
+        <input type="submit" name="Submit" value="edit" class="btn btn-primary"/>
+      </label></th>
+    </tr>
+  </table>
+</form>
+</body>
+{%endblock%}

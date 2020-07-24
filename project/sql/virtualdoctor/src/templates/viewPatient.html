@@ -1,0 +1,40 @@
+{% extends 'inddrhome.html'%}
+{%block body%}
+
+
+<body>
+<form id="form1" name="form1" method="post" action="viewpatient">
+  <table width="200" border="1"align="center" class="table table-striped">
+    <tr>
+      <th scope="row">Patient Name </th>
+      <td>gender</td>
+      <td>Age</td>
+      <td>place</td>
+      <td>post</td>
+      <td>pin</td>
+      <td>district</td>
+      <td>Contact</td>
+      <td>Email</td>
+    </tr>
+
+    {% for i in val %}
+
+    <tr>
+      <th scope="row">{{i[2]}}</th>
+      <td>{{i[3]}}</td>
+      <td>{{i[4]}}</td>
+      <td>{{i[5]}}</td>
+      <td>{{i[6]}}</td>
+      <td>{{i[7]}}</td>
+      <td>{{i[8]}}</td>
+      <td>{{i[9]}}</td>
+      <td>{{i[10]}}</td>
+
+
+    </tr>
+   {% endfor %}
+
+  </table>
+</form>
+</body>
+{%endblock%}

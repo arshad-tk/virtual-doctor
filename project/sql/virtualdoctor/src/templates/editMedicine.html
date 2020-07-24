@@ -1,0 +1,32 @@
+{% extends 'indpharmhome.html'%}
+{%block body%}
+
+
+<body>
+<form id="form1" name="form1" method="post" action="/mediedit">
+  <table width="200" border="1"align="center" class="table table-striped">
+
+    <tr>
+      <th scope="row">medicine name</th>
+      <td><label>
+        <input type="text" name="textfield2" value="{{val[2]}}"  required pattern="[A-Z a-z]{3,25}"/>
+        </label>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Description</th>
+      <td><label>
+        <textarea name="textarea2" required pattern="[A-Z a-z]{3,25}"> {{val[3]}}</textarea>
+        </label>      </td>
+    </tr>
+    <tr>
+      <th colspan="2" scope="row"> <label>
+        <input type="submit" name="Submit2" value="Update" class="btn btn-primary"/>
+        </label>      </th>
+    </tr>
+  </table>
+  <p>&nbsp;</p>
+</form>
+<p>&nbsp;</p>
+</body>
+{%endblock%}

@@ -1,0 +1,26 @@
+{% extends 'indexhome.html'%}
+{%block body%}
+<body>
+<form id="form1" name="form1" method="post" action="">
+  <table width="200" border="1" align="center"class="table table-striped" >
+    <tr>
+      <th scope="row">Dr.Name</th>
+      <td>Contact</td>
+      <td>Email</td>
+      <td>Departmet</td>
+      <td>&nbsp;</td>
+    </tr>
+    {% for i in val %}
+    <tr>
+      <td scope="row">{{i[2]}}</td>
+      <td>{{i[5]}}</td>
+      <td>{{i[4]}}</td>
+      <td>{{i[3]}}</td>
+
+      <td><a href="{{url_for('delete_doctr',id=i[0])}}">DELETE</a></td>
+    </tr>
+  {% endfor %}
+  </table>
+</form>
+</body>
+{%endblock%}

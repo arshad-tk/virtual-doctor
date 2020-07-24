@@ -1,0 +1,27 @@
+{% extends 'indhospitalhome.html'%}
+{%block body%}
+
+<body>
+<form id="form1" name="form1" method="post" action="H_viewbook">
+  <table width="200" border="1"align="center" class="table table-striped">
+    <tr>
+      <th scope="row">Patient Name </th>
+      <td>Age</td>
+      <td>date</td>
+      <td>Status</td>
+     <td>Contact</td>
+    </tr>
+
+    {% for i in val %}
+    <tr>
+      <th scope="row">{{i[2]}}</th>
+      <td>{{i[3]}}</td>
+      <td>{{i[1]}}</td>
+      <td>{{i[0]}}</td>
+      <td>{{i[4]}}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</form>
+</body>
+{%endblock%}

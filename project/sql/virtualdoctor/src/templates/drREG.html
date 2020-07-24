@@ -1,0 +1,81 @@
+{% extends 'indhospitalhome.html'%}
+{%block body%}
+
+<body>
+<form id="form1" name="form1" method="post" action="DRREG">
+  <table width="200" border="1"align="center" class="table table-striped">
+  <tr>
+    <th scope="row">Doctor Name </th>
+    <td>
+      <label>
+        <input type="text" name="textfield"  required pattern="[A-Z a-z]{3,25}"/>
+        </label>
+    </td>
+  </tr>
+  <tr>
+    <th scope="row">Department</th>
+    <td>
+      <label>
+        <input type="text" name="textfield2"  required pattern="[A-Z a-z]{3,25}"/>
+        </label>
+    </td>
+  </tr>
+  <tr>
+    <th scope="row">Email</th>
+    <td>
+      <label>
+        <input type="text" name="textfield3" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"/>
+        </label>
+     </td>
+  </tr>
+  <tr>
+    <th scope="row">Contact Number</th>
+    <td>
+      <label>
+        <input type="text" name="textfield4" required pattern="[6789][0-9]{9}"/>
+        </label>
+     </td>
+  </tr>
+
+    <tr>
+    <th scope="row">place</th>
+    <td>
+      <label>
+        <input type="text" name="textfield5"  required pattern="[A-Z a-z]{3,25}"/>
+        </label>
+     </td>
+  </tr>
+
+
+    <tr>
+    <th scope="row">post</th>
+    <td>
+      <label>
+        <input type="text" name="textfield6"  required pattern="[A-Z a-z]{3,25}"/>
+        </label>
+     </td>
+    </tr>
+
+    <tr>
+    <th scope="row">pin</th>
+    <td>
+      <label>
+        <input type="text" name="textfield7" required/>
+        </label>
+     </td>
+  </tr>
+
+
+  <tr>
+    <th colspan="2" scope="row">
+      <label>
+        <input type="submit" name="Submit" value="ADD" class="btn btn-primary"/>
+        </label>
+
+    </th>
+  </tr>
+</table>
+   </form>
+</body>
+{%endblock%}
+

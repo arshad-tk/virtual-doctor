@@ -1,0 +1,38 @@
+{% extends 'inddrhome.html'%}
+{%block body%}
+
+<body>
+<form id="form1" name="form1" method="post" action="/diseseedit">
+  <table width="200" border="1"align="center" class="table table-striped">
+    <tr>
+      <th scope="row">Type</th>
+      <td><label>
+        <select name="select" value="{{val[1]}}">
+
+          <option>viral</option>
+          <option>high</option>
+          <option>painfull</option>
+          <option selected="selected">normal</option>
+
+        </select>
+      </label></td>
+    </tr>
+    <tr>
+      <th scope="row">Disease Name </th>
+      <td><input type="textfield"name="name" value="{{val[2]}}" required pattern="[A-Z a-z]{3,25}"></td>
+    </tr>
+    <tr>
+      <th scope="row">Symptoms</th>
+      <td><label>
+        <textarea name="textarea"  required pattern="[A-Z a-z]{3,25}">{{val[3]}}</textarea>
+      </label></td>
+    </tr>
+    <tr>
+      <th colspan="2" scope="row"><label>
+        <input type="submit" name="Submit" value="edit" class="btn btn-primary"/>
+      </label></th>
+    </tr>
+  </table>
+</form>
+</body>
+{%endblock%}

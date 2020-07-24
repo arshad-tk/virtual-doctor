@@ -1,0 +1,70 @@
+{% extends 'indexhome.html'%}
+{%block body%}
+<body>
+<form id="form1" name="form1" method="post" action='/addhosp'>
+  <p>
+
+  </p>
+  <p></p>
+  <table width="200" border="1" align="center" class="table table-striped">
+    <tr>
+      <th scope="row">Hospital Name </th>
+      <td><label>
+        <input type="text" name="textfield"  required pattern="[A-Z a-z]{3,25}"/>
+      </label></td>
+    </tr>
+    <tr>
+      <th scope="row">Place</th>
+      <td><label>
+        <input type="text" name="textfield6"  required pattern="[A-Z a-z]{3,25}"/>
+      </label></td>
+    </tr>
+    <tr>
+      <th scope="row">District</th>
+      <td><label>
+        <select name="select">
+          <option>kozhikkode</option>
+          <option>malappuram</option>
+          <option>palakkad</option>
+          <option selected="selected">kollam</option>
+                </select>
+      </label></td>
+    </tr>
+    <tr>
+      <th scope="row">Pincode</th>
+      <td><label>
+        <input type="text" name="textfield2" />
+      </label></td>
+    </tr>
+    <tr>
+      <th scope="row">Post</th>
+      <td><label>
+        <input type="text" name="textfield3"  required pattern="[A-Z a-z]{3,25}"/>
+      </label></td>
+    </tr>
+    <tr>
+      <th scope="row">Phone number </th>
+      <td><label>
+        <input type="text" name="textfield4" required pattern="[6789][0-9]{9}"/>
+      </label></td>
+    </tr>
+    <tr>
+      <th scope="row">Email</th>
+      <td><label>
+        <input type="text" name="textfield5" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"/>
+      </label></td>
+    </tr>
+
+  <tr>
+    <td></td><td>    <input type="submit" name="Submit" value="ADD" class="btn btn-primary"/>
+</td>
+  </tr>
+  </table>
+    <p>
+    <label>
+    </label>
+  </p>
+  </form>
+</form>
+</body>
+{%endblock%}

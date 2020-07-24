@@ -1,0 +1,29 @@
+{% extends 'inddrhome.html'%}
+{%block body%}
+
+<body>
+<form id="form1" name="form1" method="post" action="/addisese">
+  <table width="200" border="1"align="center" class="table table-striped">
+    <tr>
+      <th scope="row">Type</th>
+      <td>Disease</td>
+      <td>Symptoms</td>
+      <td>&nbsp;</td>
+    </tr>
+
+    {% for i in val %}
+    <tr>
+      <th scope="row">{{i[1]}}</th>
+      <td>{{i[2]}}</td>
+      <td>{{i[3]}}</td>
+      <td><p><a href="{{url_for('editdisese',id=i[0])}}">EDIT</a></p>
+      <p><a href="{{url_for('deletedisese',id=i[0])}}">DELETE</a></p></td>
+    </tr>
+    {% endfor %}
+    <tr>
+      <td> <input type="submit" name="Submit" value="ADD" class="btn btn-primary"/></td>
+    </tr>
+  </table>
+</form>
+</body>
+{%endblock%}

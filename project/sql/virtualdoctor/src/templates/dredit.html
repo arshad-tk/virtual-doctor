@@ -1,0 +1,80 @@
+{% extends 'inddrhome.html'%}
+{%block body%}
+
+<body>
+<form id="form1" name="form1" method="post" action="DRedit">
+  <table width="200" border="1"align="center" class="table table-striped">
+  <tr>
+    <th scope="row">Doctor Name </th>
+    <td>
+      <label>
+        <input type="text" name="textfield"  value="{{val[2]}}"required pattern="[A-Z a-z]{3,25}"/>
+        </label>
+    </td>
+  </tr>
+  <tr>
+    <th scope="row">Department</th>
+    <td>
+      <label>
+        <input type="text" name="textfield2" value="{{val[3]}}" required pattern="[A-Z a-z]{3,25}"/>
+        </label>
+    </td>
+  </tr>
+  <tr>
+    <th scope="row">Email</th>
+    <td>
+      <label>
+        <input type="text" name="textfield3" value="{{val[4]}}"required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"/>
+        </label>
+     </td>
+  </tr>
+  <tr>
+    <th scope="row">Contact Number</th>
+    <td>
+      <label>
+        <input type="text" name="textfield4" value="{{val[5]}}"required pattern="[6789][0-9]{9}"/>
+        </label>
+     </td>
+  </tr>
+
+    <tr>
+    <th scope="row">place</th>
+    <td>
+      <label>
+        <input type="text" name="textfield5" value="{{val[6]}}" required pattern="[A-Z a-z]{3,25}"/>
+        </label>
+     </td>
+  </tr>
+
+
+    <tr>
+    <th scope="row">post</th>
+    <td>
+      <label>
+        <input type="text" name="textfield6" value="{{val[7]}}" required pattern="[A-Z a-z]{3,25}"/>
+        </label>
+     </td>
+    </tr>
+
+    <tr>
+    <th scope="row">pin</th>
+    <td>
+      <label>
+        <input type="text" name="textfield7" value="{{val[8]}}"required/>
+        </label>
+     </td>
+  </tr>
+
+
+  <tr>
+    <th colspan="2" scope="row">
+      <label>
+        <input type="submit" name="Submit" value="ADD" class="btn btn-primary"/>
+        </label>
+
+    </th>
+  </tr>
+</table>
+   </form>
+</body>
+{%endblock%}
